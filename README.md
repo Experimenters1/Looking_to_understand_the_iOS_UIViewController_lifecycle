@@ -1,7 +1,7 @@
 # Looking_to_understand_the_iOS_UIViewController_lifecycle
 ## [Looking_to_understand_the_iOS_UIViewController_lifecycle](https://stackoverflow.com/questions/5562938/looking-to-understand-the-ios-uiviewcontroller-lifecycle) <br><br>
 #
-1.**viewDidLoad()**: Initialization and setup for the view controller.(Khởi tạo và thiết lập cho view controller.) <br>
+**1.viewDidLoad()**: Initialization and setup for the view controller.(Khởi tạo và thiết lập cho view controller.) <br>
 
 ```swift
 override func viewDidLoad() {
@@ -11,7 +11,7 @@ override func viewDidLoad() {
 
 ```
 
-2.**viewWillAppear(_:)**: Actions before the view controller appears. (Các hành động trước khi view controller xuất hiện.)  <br>
+**2.viewWillAppear(_:)**: Actions before the view controller appears. (Các hành động trước khi view controller xuất hiện.)  <br>
 ```swift
 
 override func viewWillAppear(_ animated: Bool) {
@@ -20,7 +20,7 @@ override func viewWillAppear(_ animated: Bool) {
 }
 
 ```
-3.**viewDidAppear(_:)**: Actions after the view controller has appeared. (Các hành động sau khi view controller đã xuất hiện.)
+**3.viewDidAppear(_:)**: Actions after the view controller has appeared. (Các hành động sau khi view controller đã xuất hiện.) <br>
 
 ```swift
 override func viewDidAppear(_ animated: Bool) {
