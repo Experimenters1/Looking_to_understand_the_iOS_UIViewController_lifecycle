@@ -29,7 +29,7 @@ override func viewDidAppear(_ animated: Bool) {
 }
 
 ```
-**4.viewWillDisappear(_:)**: Actions before the view controller disappears. (Các hành động trước khi view controller biến mất.)
+**4.viewWillDisappear(_:)**: Actions before the view controller disappears. (Các hành động trước khi view controller biến mất.) <br>
 
 ```swift
 override func viewWillDisappear(_ animated: Bool) {
@@ -38,4 +38,9 @@ override func viewWillDisappear(_ animated: Bool) {
 }
 
 ```
+**5.viewDidDisappear(_:)**: Actions after the view controller has disappeared. () <br>
+
+
+
+
 
