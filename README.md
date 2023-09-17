@@ -38,9 +38,12 @@ override func viewWillDisappear(_ animated: Bool) {
 }
 
 ```
-**5.viewDidDisappear(_:)**: Actions after the view controller has disappeared. () <br>
+**5.viewDidDisappear(_:)**: Actions after the view controller has disappeared. (Các hành động sau khi view controller đã biến mất.) <br>
+```swift
+override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    // Thực hiện các tác vụ sau khi view controller đã biến mất.
+}
 
-
-
-
+```
 
