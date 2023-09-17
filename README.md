@@ -20,3 +20,12 @@ override func viewWillAppear(_ animated: Bool) {
 }
 
 ```
+3.**viewDidAppear(_:)**: Actions after the view controller has appeared. (Các hành động sau khi view controller đã xuất hiện.)
+
+```swift
+override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    // Thực hiện các tác vụ sau khi view controller đã xuất hiện.
+}
+
+```
