@@ -55,7 +55,15 @@ override func viewWillLayoutSubviews() {
 }
 
 ```
+**7.viewDidLayoutSubviews()**: Post-layout tasks after the subviews have been arranged. (Công việc sau khi các subview đã được sắp xếp.) <br>
 
+```swift
+override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    // Thực hiện tác vụ sau khi các view con đã được sắp xếp lại.
+}
+
+```
 
 
 
