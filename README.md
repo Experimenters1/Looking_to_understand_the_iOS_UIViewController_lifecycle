@@ -84,8 +84,20 @@ override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollect
 }
 
 ```
+**10.viewDidReceiveMemoryWarning()**:Handling memory warnings. ( Xử lý cảnh báo về bộ nhớ. ) <br>
+```swift
+override func viewDidReceiveMemoryWarning() {
+    super.viewDidReceiveMemoryWarning()
+    // Giải phóng tài nguyên không cần thiết khi hệ thống gặp khó khăn về tài nguyên.
+}
 
+```
+**11.prepare(for:sender:)**: Preparation before transitioning to a new view controller via segue. (Chuẩn bị trước khi chuyển đổi sang một view controller mới thông qua segue.) <br>
+```swift
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "YourSegueIdentifier" {
+        // Thực hiện các thiết lập trước khi chuyển đổi sang view controller mới thông qua segue.
+    }
+}
 
-
-
-
+```
