@@ -65,6 +65,27 @@ override func viewDidLayoutSubviews() {
 
 ```
 
+**8.viewWillTransition(to:with:)**: Handling screen size changes. (Xử lý thay đổi kích thước màn hình.) <br>
+
+```swift
+override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    // Điều chỉnh giao diện của bạn dựa trên sự thay đổi kích thước màn hình.
+}
+
+
+```
+
+**9.traitCollectionDidChange(_:)**: Handling trait collection changes (e.g., Dark Mode). ( Xử lý thay đổi trong tập tính (ví dụ: Chế độ Ban Đêm).) <br>
+```swift
+override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+    // Thực hiện tác vụ khi yếu tố của trait collection thay đổi (ví dụ: Dark Mode).
+}
+
+```
+
+
 
 
 
