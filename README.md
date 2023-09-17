@@ -46,4 +46,17 @@ override func viewDidDisappear(_ animated: Bool) {
 }
 
 ```
+**6.viewWillLayoutSubviews()**: Pre-layout tasks before the subviews are arranged. (Công việc chuẩn bị trước khi các subview được sắp xếp.) <br>
+
+```swift
+override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    // Thực hiện tác vụ trước khi các view con được sắp xếp lại.
+}
+
+```
+
+
+
+
 
