@@ -1,6 +1,7 @@
 # Looking_to_understand_the_iOS_UIViewController_lifecycle
 ## [Looking_to_understand_the_iOS_UIViewController_lifecycle](https://stackoverflow.com/questions/5562938/looking-to-understand-the-ios-uiviewcontroller-lifecycle) <br><br>
 #
+# [viewcontroller life cycle](https://chat.openai.com/c/f3440555-5c16-4f35-b033-6f5c4ef1e142) <br><br>
 **1.viewDidLoad()**: Initialization and setup for the view controller.(Khởi tạo và thiết lập cho view controller.) <br>
 
 ```swift
