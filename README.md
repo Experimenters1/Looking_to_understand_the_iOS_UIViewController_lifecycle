@@ -2,6 +2,22 @@
 ## [Looking_to_understand_the_iOS_UIViewController_lifecycle](https://stackoverflow.com/questions/5562938/looking-to-understand-the-ios-uiviewcontroller-lifecycle) <br><br>
 #
 # [viewcontroller life cycle](https://chat.openai.com/c/f3440555-5c16-4f35-b033-6f5c4ef1e142) <br><br>
+######
+Vòng đời của một **UIViewController** trong **iOS** có thể được mô tả bằng các phương thức và sự kiện xảy ra từ lúc nó được tạo ra cho đến khi nó bị giải phóng khỏi bộ nhớ. Dưới đây là một số phương thức quan trọng trong vòng đời của một **UIViewController:** <br><br>
+
+**1.init(coder:)** hoặc **init(nibName:bundle:):** Phương thức khởi tạo để tạo ra một **UIViewController** từ **storyboard** hoặc từ một tệp **nib (nếu sử dụng).** <br><br>
+**2.viewDidLoad():** Được gọi sau khi **view** của **controller** được tải vào bộ nhớ, thông thường được sử dụng để thực hiện việc cấu hình ban đầu của **view.** <br><br>
+**3.viewWillAppear(_:):** Được gọi trước khi **view** của **controller** sắp được hiển thị trên màn hình. <br><br>
+**4.viewDidAppear(_:):** Được gọi sau khi view của controller đã được hiển thị trên màn hình. <br><br>
+**5.viewWillDisappear(_:):** Được gọi trước khi **view của controller** sắp biến mất khỏi màn hình. <br><br>
+**6.viewDidDisappear(_:):** Được gọi sau khi view của controller đã biến mất khỏi màn hình.<br><br>
+**7.viewWillLayoutSubviews():** Được gọi trước khi hệ thống bố trí lại các subviews của view. <br><br>
+**8.viewDidLayoutSubviews():** Được gọi sau khi hệ thống đã bố trí lại các subviews của view. <br><br>
+**9.dealloc hoặc deinit:** Được gọi khi controller bị giải phóng khỏi bộ nhớ.<br><br>
+
+Trong quá trình hoạt động của ứng dụng, một **UIViewController** có thể đi qua nhiều lần chu kỳ này, tùy thuộc vào cách người dùng tương tác với ứng dụng và cách quản lý bộ nhớ của hệ thống.<br><br>
+
+######
 **1.viewDidLoad()**: Initialization and setup for the view controller.(Khởi tạo và thiết lập cho view controller.) <br>
 
 ```swift
