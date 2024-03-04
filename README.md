@@ -5,16 +5,16 @@
 ######
 Vòng đời của một **UIViewController** trong **iOS** có thể được mô tả bằng các phương thức và sự kiện xảy ra từ lúc nó được tạo ra cho đến khi nó bị giải phóng khỏi bộ nhớ. Dưới đây là một số phương thức quan trọng trong vòng đời của một **UIViewController:** <br><br>
 
-**1.init(coder:)** hoặc **init(nibName:bundle:):** Phương thức khởi tạo để tạo ra một **UIViewController** từ **storyboard** hoặc từ một tệp **nib (nếu sử dụng).** <br><br>
-**2.viewDidLoad():** Được gọi sau khi **view** của **controller** được tải vào bộ nhớ, thông thường được sử dụng để thực hiện việc cấu hình ban đầu của **view.** <br><br>
-**3.viewWillAppear(_:):** Được gọi trước khi **view** của **controller** sắp được hiển thị trên màn hình. <br><br>
-**4.viewDidAppear(_:):** Được gọi sau khi view của controller đã được hiển thị trên màn hình. <br><br>
-**5.viewWillDisappear(_:):** Được gọi trước khi **view của controller** sắp biến mất khỏi màn hình. <br><br>
-**6.viewDidDisappear(_:):** Được gọi sau khi view của controller đã biến mất khỏi màn hình.<br><br>
-**7.viewWillLayoutSubviews():** Được gọi trước khi hệ thống bố trí lại các subviews của view. <br><br>
-**8.viewDidLayoutSubviews():** Được gọi sau khi hệ thống đã bố trí lại các subviews của view. <br><br>
-**9.dealloc hoặc deinit:** Được gọi khi controller bị giải phóng khỏi bộ nhớ.<br><br>
+Vòng đời của một **UIViewController** trong **iOS** bao gồm các giai đoạn sau: <br><br>
 
+**1. Khởi tạo:** <br><br>
++ ) **init():** Hàm khởi tạo được gọi đầu tiên khi tạo một **UIViewController** mới.<br><br>
++ ) **loadView():** Hàm này được gọi để tạo ra view của **view controller.** <br><br>
++ ) **viewDidLoad():** Hàm này được gọi sau khi **view** được tạo. Đây là nơi bạn thực hiện các thiết lập ban đầu cho **view controller,** như thêm các subview, thiết lập layout, v.v. <br><br>
+
+**2. Hiển thị:** <br><br>
+
+  
 Trong quá trình hoạt động của ứng dụng, một **UIViewController** có thể đi qua nhiều lần chu kỳ này, tùy thuộc vào cách người dùng tương tác với ứng dụng và cách quản lý bộ nhớ của hệ thống.<br><br>
 
 ######
