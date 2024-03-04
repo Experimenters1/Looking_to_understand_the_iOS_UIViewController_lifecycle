@@ -36,6 +36,70 @@ Ngoài ra, vòng đời của UIViewController còn có thể bị ảnh hưởn
 + ) **Đa nhiệm:** Khi ứng dụng của bạn bị chuyển sang chế độ nền, các view controller có thể bị gỡ bỏ khỏi bộ nhớ để giải phóng tài nguyên. <br><br>
 
 Hiểu rõ về vòng đời của UIViewController là rất quan trọng để bạn có thể viết code một cách hiệu quả và tránh các lỗi tiềm ẩn. <br><br>
+
+### For Example
+```swift
+import UIKit
+
+class MyViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Được gọi khi view của UIViewController được tải vào bộ nhớ.
+        // Thích hợp để thực hiện các thiết lập ban đầu cho view.
+        setupUI()
+        fetchData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Được gọi khi view sẽ được hiển thị trên màn hình, trước khi animation bắt đầu.
+        // Thích hợp để cập nhật dữ liệu hoặc giao diện trước khi hiển thị.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Được gọi khi view đã được hiển thị hoàn toàn trên màn hình.
+        // Thích hợp để bắt đầu các hoạt động tương tác với người dùng.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Được gọi khi view sẽ biến mất khỏi màn hình, trước khi animation bắt đầu.
+        // Thích hợp để lưu trạng thái hoặc dừng các hoạt động.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Được gọi khi view đã biến mất hoàn toàn khỏi màn hình.
+        // Thích hợp để dọn dẹp hoặc thực hiện các tác vụ sau khi view biến mất.
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        // Được gọi khi giao diện của thiết bị thay đổi, cho phép bạn cập nhật giao diện theo kích thước mới.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Được gọi khi hệ thống gặp vấn đề về bộ nhớ, cung cấp cơ hội để giải phóng bộ nhớ không cần thiết.
+    }
+    
+    deinit {
+        // Được gọi khi UIViewController bị giải phóng khỏi bộ nhớ.
+        // Thích hợp để giải phóng tài nguyên hoặc hủy các đăng ký quan sát.
+    }
+    
+    func setupUI() {
+        // Thiết lập giao diện người dùng (UI), ánh xạ các thành phần giao diện.
+    }
+    
+    func fetchData() {
+        // Lấy dữ liệu từ nguồn nào đó, ví dụ: API, cơ sở dữ liệu.
+    }
+}
+
+```
   
 Trong quá trình hoạt động của ứng dụng, một **UIViewController** có thể đi qua nhiều lần chu kỳ này, tùy thuộc vào cách người dùng tương tác với ứng dụng và cách quản lý bộ nhớ của hệ thống.<br><br>
 
