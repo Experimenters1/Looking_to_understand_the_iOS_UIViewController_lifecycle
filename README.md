@@ -13,7 +13,29 @@ Vòng đời của một **UIViewController** trong **iOS** bao gồm các giai 
 + ) **viewDidLoad():** Hàm này được gọi sau khi **view** được tạo. Đây là nơi bạn thực hiện các thiết lập ban đầu cho **view controller,** như thêm các subview, thiết lập layout, v.v. <br><br>
 
 **2. Hiển thị:** <br><br>
++ )**viewWillAppear(_:):** Hàm này được gọi trước khi **view controller** được hiển thị trên màn hình. <br><br>
++ )**viewDidAppear(_:):** Hàm này được gọi sau khi **view controller** được hiển thị trên màn hình. <br><br>
 
+**3. Ẩn:** <br><br>
++ )**viewWillDisappear(_:):** Hàm này được gọi trước khi view controller bị ẩn khỏi màn hình. <br><br>
++ )**viewDidDisappear(_:):** Hàm này được gọi sau khi view controller bị ẩn khỏi màn hình. <br><br>
+
+**4. Giải phóng:**  <br><br>
++ )**viewDidUnload():** Hàm này được gọi khi view controller bị gỡ bỏ khỏi bộ nhớ. <br><br>
+
+**Lưu ý:**
+
++ ) Các hàm **viewWillAppear(_:), viewDidAppear(_: ), viewWillDisappear(_: ), viewDidDisappear(_: )** được gọi mỗi khi view controller được hiển thị hoặc ẩn khỏi màn hình. <br><br>
++ ) Hàm **viewDidUnload(_:)** chỉ được gọi khi **view controller** bị gỡ bỏ khỏi bộ nhớ. <br><br>
++ ) Bạn có thể **override** các hàm này trong **subclass** của **UIViewController** để thực hiện các hành vi tùy chỉnh. <br><br>
+
+
+Ngoài ra, vòng đời của UIViewController còn có thể bị ảnh hưởng bởi các yếu tố khác như: <br><br>
+
++ ) Chuyển đổi giữa các **view controller:** Khi bạn chuyển đổi giữa các **view controller, các hàm viewWillAppear(_:), viewDidAppear(_: ), viewWillDisappear(_: ), viewDidDisappear(_: )** của các **view controller** liên quan sẽ được gọi.
++ ) **Đa nhiệm:** Khi ứng dụng của bạn bị chuyển sang chế độ nền, các view controller có thể bị gỡ bỏ khỏi bộ nhớ để giải phóng tài nguyên. <br><br>
+
+Hiểu rõ về vòng đời của UIViewController là rất quan trọng để bạn có thể viết code một cách hiệu quả và tránh các lỗi tiềm ẩn. <br><br>
   
 Trong quá trình hoạt động của ứng dụng, một **UIViewController** có thể đi qua nhiều lần chu kỳ này, tùy thuộc vào cách người dùng tương tác với ứng dụng và cách quản lý bộ nhớ của hệ thống.<br><br>
 
