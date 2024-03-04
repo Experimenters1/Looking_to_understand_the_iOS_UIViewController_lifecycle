@@ -37,7 +37,7 @@ Ngoài ra, vòng đời của UIViewController còn có thể bị ảnh hưởn
 
 Hiểu rõ về vòng đời của UIViewController là rất quan trọng để bạn có thể viết code một cách hiệu quả và tránh các lỗi tiềm ẩn. <br><br>
 
-### For Example
+### For Example : 
 ```swift
 import UIKit
 
