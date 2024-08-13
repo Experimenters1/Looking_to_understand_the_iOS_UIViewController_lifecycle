@@ -3,6 +3,17 @@
 #
 # [viewcontroller life cycle](https://chat.openai.com/c/f3440555-5c16-4f35-b033-6f5c4ef1e142) <br><br>
 ######
+
+**View Controller life cycle** là gì? chính là vòng đời của một **view controller** được tính từ lúc nó được nạp vào **bộ nhớ(RAM)** cho tới khi nó bị huỷ khỏi bộ nhớ. <br><br>
+
+Một cách hiểu đơn gian về UIViewController chính là một class cung cấp mọi thứ cần thiết để quản lý View in iOS app. <br><br>
+
+View controller có nhiệm vụ chính sau : <br><br>
+
+Update nội dung của view theo thay đổi tới các data bên dưới. Tương tác với view và system. Thay đổi size view và quản lý các layout. Lưu ý: Một View Controller chỉ có thể được quản lý được một View và tập hợp các Subview(Các control như button, label, UIView….). <br><br>
+
+
+
 Vòng đời của một **UIViewController** trong **iOS** có thể được mô tả bằng các phương thức và sự kiện xảy ra từ lúc nó được tạo ra cho đến khi nó bị giải phóng khỏi bộ nhớ. Dưới đây là một số phương thức quan trọng trong vòng đời của một **UIViewController:** <br><br>
 
 Vòng đời của một **UIViewController** trong **iOS** bao gồm các giai đoạn sau: <br><br>
